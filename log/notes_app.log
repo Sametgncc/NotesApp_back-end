@@ -361,3 +361,221 @@ This generated password is for development use only. Your security configuration
 2024-05-25 16:29:50,625 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-05-25 16:29:50,627 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
 2024-05-25 16:29:50,629 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+2024-05-25 17:57:31,267 INFO  [main] com.project.notehandler.NoteHandlerApplication:Starting NoteHandlerApplication using Java 17.0.11 with PID 11364 (C:\Users\samet\IdeaProjects\noteHandler\target\classes started by samet in C:\Users\samet\IdeaProjects\noteHandler)
+2024-05-25 17:57:31,268 INFO  [main] com.project.notehandler.NoteHandlerApplication:No active profile set, falling back to 1 default profile: "default"
+2024-05-25 17:57:31,965 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-25 17:57:32,018 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 45 ms. Found 3 JPA repository interfaces.
+2024-05-25 17:57:32,297 WARN  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-05-25 17:57:32,364 INFO  [main] org.springframework.ws.soap.addressing.server.AnnotationActionEndpointMapping:Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-05-25 17:57:32,586 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port 8080 (http)
+2024-05-25 17:57:32,596 INFO  [main] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2024-05-25 17:57:32,596 INFO  [main] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-25 17:57:32,646 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2024-05-25 17:57:32,646 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1342 ms
+2024-05-25 17:57:32,777 INFO  [main] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-25 17:57:32,857 INFO  [main] org.hibernate.Version:HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-25 17:57:32,896 INFO  [main] org.hibernate.cache.internal.RegionFactoryInitiator:HHH000026: Second-level cache disabled
+2024-05-25 17:57:33,128 INFO  [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo:No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-25 17:57:33,160 INFO  [main] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+2024-05-25 17:57:33,319 INFO  [main] com.zaxxer.hikari.pool.HikariPool:HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@68b3248a
+2024-05-25 17:57:33,321 INFO  [main] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+2024-05-25 17:57:33,360 WARN  [main] org.hibernate.orm.deprecation:HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-25 17:57:34,259 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-25 17:57:34,324 WARN  [main] org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl:GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table files (
+        id bigserial not null,
+        file_data MEDIUMBLOB,
+        file_type varchar(255) not null,
+        files bigint,
+        primary key (id)
+    )" via JDBC [ERROR: type "mediumblob" does not exist
+  Position: 79]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table files (
+        id bigserial not null,
+        file_data MEDIUMBLOB,
+        file_type varchar(255) not null,
+        files bigint,
+        primary key (id)
+    )" via JDBC [ERROR: type "mediumblob" does not exist
+  Position: 79]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:574)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:514)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:315)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:80)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.project.notehandler.NoteHandlerApplication.main(NoteHandlerApplication.java:10)
+Caused by: org.postgresql.util.PSQLException: ERROR: type "mediumblob" does not exist
+  Position: 79
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:335)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:321)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:297)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:292)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 38 common frames omitted
+2024-05-25 17:57:34,330 WARN  [main] org.hibernate.engine.jdbc.spi.SqlExceptionHelper:SQL Warning Code: 0, SQLState: 00000
+2024-05-25 17:57:34,331 WARN  [main] org.hibernate.engine.jdbc.spi.SqlExceptionHelper:relation "files" does not exist, skipping
+2024-05-25 17:57:34,359 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-25 17:57:34,723 WARN  [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-25 17:57:35,045 WARN  [main] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:
+
+Using generated security password: aed1ddfe-3c04-43d4-80b1-0216494a2fd3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-25 17:57:35,158 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2c56e044, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d970881, org.springframework.security.web.context.SecurityContextHolderFilter@715523b8, org.springframework.security.web.header.HeaderWriterFilter@1bf4a79b, org.springframework.web.filter.CorsFilter@153cf928, org.springframework.security.web.csrf.CsrfFilter@1b89debc, org.springframework.security.web.authentication.logout.LogoutFilter@627ad446, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@67201002, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@15e748b5, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4884350b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@510e0dd2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ac30be4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@419c70f6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53cba89f, org.springframework.security.web.access.ExceptionTranslationFilter@3aac31b7, org.springframework.security.web.access.intercept.AuthorizationFilter@d082916]
+2024-05-25 17:57:35,235 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port 8080 (http) with context path ''
+2024-05-25 17:57:35,242 INFO  [main] com.project.notehandler.NoteHandlerApplication:Started NoteHandlerApplication in 4.385 seconds (process running for 5.128)
+2024-05-25 18:02:09,764 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-25 18:09:47,566 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-25 18:09:47,577 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+2024-05-25 18:09:47,583 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+2024-05-25 18:17:57,199 INFO  [main] com.project.notehandler.NoteHandlerApplication:Starting NoteHandlerApplication using Java 17.0.11 with PID 21344 (C:\Users\samet\IdeaProjects\noteHandler\target\classes started by samet in C:\Users\samet\IdeaProjects\noteHandler)
+2024-05-25 18:17:57,200 INFO  [main] com.project.notehandler.NoteHandlerApplication:No active profile set, falling back to 1 default profile: "default"
+2024-05-25 18:17:57,759 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-25 18:17:57,806 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 39 ms. Found 3 JPA repository interfaces.
+2024-05-25 18:17:58,019 WARN  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-05-25 18:17:58,060 INFO  [main] org.springframework.ws.soap.addressing.server.AnnotationActionEndpointMapping:Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-05-25 18:17:58,237 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port 8080 (http)
+2024-05-25 18:17:58,247 INFO  [main] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2024-05-25 18:17:58,247 INFO  [main] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-25 18:17:58,293 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2024-05-25 18:17:58,293 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1063 ms
+2024-05-25 18:17:58,412 INFO  [main] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-25 18:17:58,475 INFO  [main] org.hibernate.Version:HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-25 18:17:58,509 INFO  [main] org.hibernate.cache.internal.RegionFactoryInitiator:HHH000026: Second-level cache disabled
+2024-05-25 18:17:58,718 INFO  [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo:No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-25 18:17:58,742 INFO  [main] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+2024-05-25 18:17:58,885 INFO  [main] com.zaxxer.hikari.pool.HikariPool:HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5e158f33
+2024-05-25 18:17:58,886 INFO  [main] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+2024-05-25 18:17:58,920 WARN  [main] org.hibernate.orm.deprecation:HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-25 18:17:59,637 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-25 18:17:59,693 WARN  [main] org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl:GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table files (
+        id bigserial not null,
+        file_data MEDIUMBLOB,
+        file_type varchar(255) not null,
+        files bigint,
+        primary key (id)
+    )" via JDBC [ERROR: type "mediumblob" does not exist
+  Position: 79]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table files (
+        id bigserial not null,
+        file_data MEDIUMBLOB,
+        file_type varchar(255) not null,
+        files bigint,
+        primary key (id)
+    )" via JDBC [ERROR: type "mediumblob" does not exist
+  Position: 79]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:574)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:514)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:315)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:80)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.project.notehandler.NoteHandlerApplication.main(NoteHandlerApplication.java:10)
+Caused by: org.postgresql.util.PSQLException: ERROR: type "mediumblob" does not exist
+  Position: 79
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:335)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:321)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:297)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:292)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 38 common frames omitted
+2024-05-25 18:17:59,699 WARN  [main] org.hibernate.engine.jdbc.spi.SqlExceptionHelper:SQL Warning Code: 0, SQLState: 00000
+2024-05-25 18:17:59,699 WARN  [main] org.hibernate.engine.jdbc.spi.SqlExceptionHelper:relation "files" does not exist, skipping
+2024-05-25 18:17:59,724 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-25 18:18:00,053 WARN  [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-25 18:18:00,339 WARN  [main] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:
+
+Using generated security password: 100826ff-f23e-4e2f-8caf-34202abe9530
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-25 18:18:00,439 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@f776b4a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2fb555e8, org.springframework.security.web.context.SecurityContextHolderFilter@77feca04, org.springframework.security.web.header.HeaderWriterFilter@64821706, org.springframework.web.filter.CorsFilter@19a544cd, org.springframework.security.web.csrf.CsrfFilter@4a2f1ae3, org.springframework.security.web.authentication.logout.LogoutFilter@1f7853af, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4a985388, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@513ddf5f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6c502018, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@76cad511, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ac35b17, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6eaf6ced, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@58c93be3, org.springframework.security.web.access.ExceptionTranslationFilter@7f82a71f, org.springframework.security.web.access.intercept.AuthorizationFilter@6bab8290]
+2024-05-25 18:18:00,501 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port 8080 (http) with context path ''
+2024-05-25 18:18:00,508 INFO  [main] com.project.notehandler.NoteHandlerApplication:Started NoteHandlerApplication in 3.645 seconds (process running for 6.735)
+2024-05-25 18:18:26,614 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-25 18:32:57,807 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-25 18:32:57,809 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+2024-05-25 18:32:57,810 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.

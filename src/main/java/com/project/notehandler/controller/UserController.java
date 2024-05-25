@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/users") // http://localhost:8085/api/users
 @RequiredArgsConstructor
 public class UserController {
 
