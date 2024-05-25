@@ -1,0 +1,51 @@
+
+server:
+  port: 8080
+  error:
+    include-binding-errors: always
+    include-message: always
+    include-stacktrace: never
+
+
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/notes_app
+    username: db_notes
+    password: db_password
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      '[hibernate.format_sql]': true
+
+
+      spring:
+        boot:
+          debug: true
+
+  # application.yml
+  openai:
+    api-key: your_openai_api_key
+
+logging:   #logging
+  file:
+    name: log/notes_app.log
+  pattern:
+    # tarih - log seviyesi - hangi thread - hangi logger nesnesi - mesajin kendisi
+    file: "%d %-5level [%thread] %logger:%msg%n"
+  level:
+    '[org.springframework.web]': WARN
+    '[org.hibernate]': INFO
+    '[com.project]': INFO
+
+management:   # actuator
+  endpoints:
+    web:
+      exposure:
+        include: ['health','loggers','env','beans']

@@ -1,0 +1,3 @@
+Docker container ile mysql oluşturmak için aşağıdaki komutu bu dizinde çalıştırın.
+
+docker-compose up -d
